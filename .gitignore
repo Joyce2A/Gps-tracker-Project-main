@@ -1,0 +1,92 @@
+# ==========================
+# Python
+# ==========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual Environment
+venv/
+.env/
+.venv/
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# Firebase Secrets
+firebase-service-account.json
+serviceAccountKey.json
+firebase_adminsdk.json
+
+# Python cache
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# SQLite
+*.db
+*.sqlite3
+
+# Build
+build/
+dist/
+
+# Node
+node_modules/
+
+# React
+coverage/
+
+# Expo
+.expo/
+.expo-shared/
+
+# Android
+android/.gradle/
+android/local.properties
+
+# iOS
+ios/Pods/
+
+# Secrets
+*.pem
+*.key
+*.crt
+*.p12
+
+# Temporary
+*.tmp
+*.temp
+
+# Uploads
+uploads/
+
+# Generated files
+*.pyc
+
+# JWT secrets
+secret.key
+
+# Backup files
+*.bak
+*.old
+
+# Mac
+.AppleDouble
+.LSOverride
