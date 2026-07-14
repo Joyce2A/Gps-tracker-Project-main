@@ -1980,7 +1980,7 @@ logger = logging.getLogger("Mqtt_client")
 # BROKER = "broker.hivemq.com"
 BROKER = "broker.hivemq.com"
 PORT = 1883
-TOPIC_SUBSCRIBE = "my/devices/#"
+TOPIC_SUBSCRIBE = "my/device/#"
 CLIENT_ID = "device_subscriber"
 
 # --------------------------------------------------

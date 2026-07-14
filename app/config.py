@@ -33,11 +33,11 @@ from typing import Optional
 
 class Settings(BaseSettings):
     # Database
-    MONGO_URI: str = "mongodb://localhost:27017"
-    DB_NAME: str = "gps_tracker"
+    MONGO_URI: str 
+    DB_NAME: str 
 
     # JWT
-    JWT_SECRET: str = "1khmsGIDTZD7CiH7NmbttVAv_b3Ry2zwsuc1XF8ugCM"
+    JWT_SECRET: str 
     JWT_ALGORITHM: str = "HS256"
     JWT_EXP_MINUTES: int = 60
 
