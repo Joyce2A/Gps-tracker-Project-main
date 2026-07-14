@@ -26,22 +26,22 @@
 
 
 from pathlib import Path
-from pydantic import BaseSettings
-#added for render
 from typing import Optional
+
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
     # Database
-    MONGO_URI: str 
-    DB_NAME: str 
+    MONGO_URI: str
+    DB_NAME: str
 
     # JWT
-    JWT_SECRET: str 
+    JWT_SECRET: str
     JWT_ALGORITHM: str = "HS256"
     JWT_EXP_MINUTES: int = 60
 
-    # Email (MANDATORY)
+    # Email
     EMAIL_HOST: str = "smtp.gmail.com"
     EMAIL_PORT: int = 587
     EMAIL_USERNAME: str
@@ -52,16 +52,17 @@ class Settings(BaseSettings):
     MAIL_TLS: bool = True
     MAIL_SSL: bool = False
 
-    # RESEND (RENDER)
+    # RESEND
     RESEND_API_KEY: Optional[str] = None
 
-    class Config:
-        env_file = str(Path(__file__).resolve().parent.parent / ".env")
-        env_file_encoding = "utf-8"
+    model_config = SettingsConfigDict(
+        env_file=str(Path(__file__).resolve().parent.parent / ".env"),
+        env_file_encoding="utf-8",
+        extra="ignore"
+    )
 
 
 settings = Settings()
-
 
 # 🔍 TEMP DEBUG – remove after testing
 # print("EMAIL USER:", settings.EMAIL_USERNAME)
